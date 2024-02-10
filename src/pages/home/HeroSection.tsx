@@ -1,17 +1,25 @@
 import Container from "@/components/Container";
-import React from "react";
+import { Button } from "@/components/ui/button";
+import mackbook from "@/assets/images/react.svg";
+
 
 const HeroSection = () => {
   return (
-    <Container>
+    <Container className="h-[calc(100vh-64px)] grid grid-cols-2 place-content-center">
       <div>
-        <h1>
-            <span>Don't worry.</span>
+        <h1 className="text-8xl font-bold">
+            <span className="text-gray">Don't worry,</span>
             <br />
             <span>We'll fix it.</span>
         </h1>
+        <p>
+          Welcome to <span>iRepair</span> , your one-stop place for all kinds of <span> Mackbook reparis</span> and diagonostics.
+        </p>
+        <Button>Book a service</Button>
       </div>
-      <div></div>
+      <div>
+        <img src={mackbook} alt="" />
+      </div>
     </Container>
   );
 };
