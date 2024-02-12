@@ -8,11 +8,12 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <motion.header className=" h-16 "
+    <motion.header className=" h-16 fixed w-full bg-white z-[99]"
     initial={{ opacity: 0}}
     animate= {{ opacity: 1}}
     transition={{
-      duration: 1
+      duration: 1,
+      delay: 1,
     }}
     >
       <nav className="w-full h-full max-w-[1230px] px-[20px] mx-auto  flex justify-between items-center">
