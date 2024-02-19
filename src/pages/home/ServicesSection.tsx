@@ -1,7 +1,7 @@
 import Container from "@/components/Container";
 import BatteryReplacement from "@/components/ServiceTyles/BatteryReplacement";
 import ChipsetReplacement from "@/components/ServiceTyles/ChipsetReplacement";
-import DataRecovery from "./DataRecovery";
+import DataRecovery from "../../components/ServiceTyles/DataRecovery";
 
 const ServicesSection = () => {
   return (
