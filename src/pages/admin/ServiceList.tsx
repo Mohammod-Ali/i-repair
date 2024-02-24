@@ -4,6 +4,11 @@ import { json } from "stream/consumers";
 const ServiceList = () => {
 
 const [data, setData] = useState([])
+const [error, setError] = useState([])
+
+const getData = async() => {
+
+}
 
 useEffect(() => {
   fetch('https://jsonplaceholder.typicode.com/posts')
