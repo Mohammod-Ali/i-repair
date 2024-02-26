@@ -1,23 +1,38 @@
+import { getServices } from "@/api/admin/services/service.api";
+import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { json } from "stream/consumers";
 
 const ServiceList = () => {
 
-const [data, setData] = useState([])
-const [error, setError] = useState([])
+// const [data, setData] = useState([])
+// const [error, setError] = useState([])
 
-const getData = async() => {
+// const getData = async() => {
 
+// }
+
+// useEffect(() => {
+//   fetch('https://jsonplaceholder.typicode.com/posts')
+//   .then(res => res.json())
+//   .then( data => setData(data))
+// },[])
+
+const  {data, isLoading, isError} = useQuery({
+  queryKey: ['services'],
+  queryFn: getServices,
+})
+
+if(isLoading){
+  return <p>Loading...</p>
 }
 
-useEffect(() => {
-  fetch('https://jsonplaceholder.typicode.com/posts')
-  .then(res => res.json())
-  .then( data => setData(data))
-},[])
+console.log({data})
 
   return <div>
-        This is service components
+      {
+        data?.map((item) => <h1>{item.title}</h1>)
+      }
   </div>;
 };
 
