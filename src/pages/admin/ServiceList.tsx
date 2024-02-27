@@ -1,7 +1,5 @@
 import { getServices } from "@/api/admin/services/service.api";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
-import { json } from "stream/consumers";
 
 const ServiceList = () => {
 
@@ -18,7 +16,7 @@ const ServiceList = () => {
 //   .then( data => setData(data))
 // },[])
 
-const  {data, isLoading, isError} = useQuery({
+const  {data, isLoading, } = useQuery({
   queryKey: ['services'],
   queryFn: getServices,
 })
