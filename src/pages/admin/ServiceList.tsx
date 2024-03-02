@@ -89,9 +89,9 @@ const services = data.map(i =>({
     {services.map((service) => (
       <TableRow key={service.name}>
         <TableCell className="font-medium">{service.description}</TableCell>
-        {/* <TableCell>{invoice.paymentStatus}</TableCell>
+        <TableCell>{invoice.paymentStatus}</TableCell>
         <TableCell>{invoice.paymentMethod}</TableCell>
-        <TableCell className="text-right">{invoice.totalAmount}</TableCell> */}
+        <TableCell className="text-right">{invoice.totalAmount}</TableCell>
       </TableRow>
     ))}
   </TableBody>
