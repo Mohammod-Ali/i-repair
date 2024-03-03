@@ -1,4 +1,5 @@
 import { getServices } from "@/api/admin/services/service.api";
+import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useQuery } from "@tanstack/react-query";
 
@@ -76,29 +77,32 @@ const services = data.map(i =>({
 // ]
 
   return <Table>
-  <TableCaption>A list of your recent invoices.</TableCaption>
   <TableHeader>
     <TableRow>
-      <TableHead className="w-[100px]">Invoice</TableHead>
-      <TableHead>Status</TableHead>
-      <TableHead>Method</TableHead>
-      <TableHead className="text-right">Amount</TableHead>
+      <TableHead >name</TableHead>
+      <TableHead>description</TableHead>
+      {/* <TableHead>Method</TableHead> */}
+      <TableHead className="text-right">Action</TableHead>
     </TableRow>
   </TableHeader>
   <TableBody>
     {services.map((service) => (
       <TableRow key={service.name}>
         <TableCell className="font-medium">{service.description}</TableCell>
-        <TableCell>{invoice.paymentStatus}</TableCell>
+        <TableCell className="text-right">
+          <Button variant='destructive'>Del</Button>
+        </TableCell>
+        {/* <TableCell>{invoice.paymentStatus}</TableCell>
         <TableCell>{invoice.paymentMethod}</TableCell>
-        <TableCell className="text-right">{invoice.totalAmount}</TableCell>
+        <TableCell className="text-right">{invoice.totalAmount}</TableCell> */}
+
       </TableRow>
     ))}
   </TableBody>
   <TableFooter>
     <TableRow>
-      <TableCell colSpan={3}>Total</TableCell>
-      <TableCell className="text-right">$2,500.00</TableCell>
+      <TableCell colSpan={3}>Total Services</TableCell>
+      <TableCell className="text-right">{services.length}</TableCell>
     </TableRow>
   </TableFooter>
 </Table>
