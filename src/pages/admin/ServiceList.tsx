@@ -2,6 +2,7 @@ import { getServices } from "@/api/admin/services/service.api";
 import { Button } from "@/components/ui/button";
 import { Table, TableBody, TableCaption, TableCell, TableFooter, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { useQuery } from "@tanstack/react-query";
+import { Trash2 } from "lucide-react";
 
 const ServiceList = () => {
 
@@ -90,7 +91,7 @@ const services = data.map(i =>({
       <TableRow key={service.name}>
         <TableCell className="font-medium">{service.description}</TableCell>
         <TableCell className="text-right">
-          <Button variant='destructive'>Del</Button>
+          <Button variant='destructive' className="p-2"><Trash2></Trash2></Button>
         </TableCell>
         {/* <TableCell>{invoice.paymentStatus}</TableCell>
         <TableCell>{invoice.paymentMethod}</TableCell>
