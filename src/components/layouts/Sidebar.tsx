@@ -12,7 +12,7 @@ const Sidebar = () => {
             cn(
               "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-white transition-all  flex items-center gap-2",
               {
-                "hover:bg-dark-gray hover:text-white": isActive,
+                "bg-dark-gray text-white": isActive,
               }
             )
           }
@@ -26,7 +26,7 @@ const Sidebar = () => {
             cn(
               "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-white transition-all  flex items-center gap-2",
               {
-                "hover:bg-dark-gray hover:text-white": isActive,
+                "bg-dark-gray text-white": isActive,
               }
             )
           }
@@ -40,7 +40,7 @@ const Sidebar = () => {
             cn(
               "p-3 bg-gray rounded-md hover:bg-dark-gray hover:text-white transition-all  flex items-center gap-2",
               {
-                "hover:bg-dark-gray hover:text-white": isActive,
+                "bg-dark-gray text-white": isActive,
               }
             )
           }

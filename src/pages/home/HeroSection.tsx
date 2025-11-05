@@ -1,6 +1,6 @@
 import Container from "@/components/Container";
 import { Button } from "@/components/ui/button";
-import mackbook from "@/assets/images/react.svg";
+import macbook from "@/assets/images/react.svg";
 import { motion } from "framer-motion";
 
 const intro = {
@@ -76,7 +76,7 @@ const HeroSection = () => {
           initial="initial"
           animate="animate"
         >
-          <img className=" h-[95%] object-contain" src={mackbook} alt="" />
+          <img className=" h-[95%] object-contain" src={macbook} alt="" />
         </motion.div>
       </Container>
     </div>
